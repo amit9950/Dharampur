@@ -1,0 +1,2932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmpur Village - Etah, Uttar Pradesh | Official Website</title>
+    <style>
+        /* ============ ROOT & VARIABLES ============ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2ecc71;
+            --primary-dark: #27ae60;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #ecf0f1;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            transition: all 0.3s ease;
+            font-size: clamp(14px, 2vw, 18px);
+            scroll-behavior: smooth;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body.dark-mode {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ============ RESPONSIVE UTILITIES ============ */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        iframe {
+            max-width: 100%;
+            border: none;
+        }
+
+        button,
+        a.btn,
+        a.btn-small {
+            min-height: 44px;
+            min-width: 44px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Responsive Typography */
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+        }
+
+        h4 {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+        }
+
+        /* ============ HEADER & NAVIGATION ============ */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 12px 40px rgba(46, 204, 113, 0.15);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode header {
+            background: linear-gradient(135deg, #1e5631 0%, #0d3a0d 100%);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 18px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a:hover::before {
+            opacity: 1;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .dark-mode-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .dark-mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(20deg) scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ============ HERO SLIDER ============ */
+        .hero-section {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .slide-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 10;
+            border-radius: 5px;
+        }
+
+        .slider-btn:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .slider-btn.prev {
+            left: 20px;
+        }
+
+        .slider-btn.next {
+            right: 20px;
+        }
+
+        /* ============ SECTIONS ============ */
+        section {
+            padding: 5rem 0;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9fa 100%);
+        }
+
+        body.dark-mode .about {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-feature {
+            display: flex;
+            gap: 1rem;
+            background: var(--glass-bg);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .about-feature-icon {
+            font-size: 2rem;
+            min-width: 50px;
+        }
+
+        /* ============ POPULATION STATS ============ */
+        .stats {
+            background: white;
+        }
+
+        body.dark-mode .stats {
+            background: #1a1a1a;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ============ PANCHAYAT SECTION ============ */
+        .panchayat {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9fa 100%);
+        }
+
+        body.dark-mode .panchayat {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .panchayat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .panchayat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: 0.3s;
+        }
+
+        .panchayat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .panchayat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .panchayat-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .panchayat-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* ============ EDUCATION SECTION ============ */
+        .education {
+            background: white;
+        }
+
+        body.dark-mode .education {
+            background: #1a1a1a;
+        }
+
+        .education-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .education-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .education-list {
+            list-style: none;
+        }
+
+        .education-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .education-item-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .education-item-text h4 {
+            color: var(--primary-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .education-item-text p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .education-img {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 400px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ============ AGRICULTURE SECTION ============ */
+        .agriculture {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9fa 100%);
+        }
+
+        body.dark-mode .agriculture {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .agriculture-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .agriculture-text h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .agriculture-text>p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .crops-list {
+            list-style: none;
+        }
+
+        .crop-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: 0.3s;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        body.dark-mode .crop-item {
+            background: #2a2a2a;
+        }
+
+        .crop-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .crop-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+        }
+
+        .crop-item h4 {
+            color: var(--primary-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .crop-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .agriculture-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: 0.3s;
+        }
+
+        body.dark-mode .info-card {
+            background: #2a2a2a;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ============ NEWS SECTION ============ */
+        .news {
+            background: white;
+        }
+
+        body.dark-mode .news {
+            background: #1a1a1a;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9fa 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: 0.3s;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        body.dark-mode .news-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .news-category {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .news-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .news-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ============ VIDEOS SECTION ============ */
+        .videos {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9fa 100%);
+        }
+
+        body.dark-mode .videos {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: 0.3s;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        body.dark-mode .video-card {
+            background: #2a2a2a;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .video-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-small {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-small:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .map-container-temples {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ============ RELIGIOUS SECTION ============ */
+        .religious {
+            background: linear-gradient(135deg, #f6f2ea 0%, #ffffff 100%);
+        }
+
+        body.dark-mode .religious {
+            background: linear-gradient(135deg, #232323 0%, #171717 100%);
+        }
+
+        .religious-card {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 24px 60px rgba(34, 24, 14, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(14px);
+        }
+
+        body.dark-mode .religious-card {
+            background: rgba(24, 24, 24, 0.96);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .religious-image-wrap {
+            position: relative;
+            min-height: 440px;
+            background: linear-gradient(135deg, #1f3b2f 0%, #35654c 45%, #b98c42 100%);
+        }
+
+        .religious-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .religious-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 15, 12, 0.1) 0%, rgba(10, 15, 12, 0.55) 100%);
+        }
+
+        .religious-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 0.7rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .religious-content {
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .religious-kicker {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .religious-content h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        body.dark-mode .religious-content h3 {
+            color: #f7f3eb;
+        }
+
+        .religious-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .religious-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .religious-meta span {
+            padding: 0.7rem 1rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.12), rgba(52, 152, 219, 0.12));
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        body.dark-mode .religious-meta span {
+            background: rgba(255, 255, 255, 0.08);
+            color: #f0f0f0;
+        }
+
+        .religious-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .religious-mini-card {
+            padding: 1rem;
+            border-radius: 16px;
+            background: var(--bg-light);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        body.dark-mode .religious-mini-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .religious-mini-card strong {
+            display: block;
+            color: var(--text-dark);
+            margin-bottom: 0.2rem;
+        }
+
+        body.dark-mode .religious-mini-card strong {
+            color: #f7f3eb;
+        }
+
+        .religious-mini-card small {
+            color: var(--text-light);
+        }
+
+        /* ============ EVENTS SECTION ============ */
+        .events {
+            background: white;
+        }
+
+        body.dark-mode .events {
+            background: #1a1a1a;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(52, 152, 219, 0.1));
+            border: 2px solid var(--primary-color);
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .event-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .event-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .event-date {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* ============ GALLERY SECTION ============ */
+        .gallery {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f8f9fa 100%);
+        }
+
+        body.dark-mode .gallery {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: var(--shadow-md);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item:hover::after {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============ MODAL ============ */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 600px;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        body.dark-mode .modal-content {
+            background: #2a2a2a;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-light);
+            background: none;
+            border: none;
+        }
+
+        .close-modal:hover {
+            color: var(--text-dark);
+        }
+
+        /* ============ CONTACT SECTION ============ */
+        .contact {
+            background: white;
+        }
+
+        body.dark-mode .contact {
+            background: #1a1a1a;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            transition: 0.3s;
+        }
+
+        body.dark-mode .contact-item {
+            background: #2a2a2a;
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            min-width: 40px;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text strong {
+            color: var(--primary-dark);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form h3 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 12px;
+            border: 2px solid var(--bg-light);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--bg-white);
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea {
+            background: #2a2a2a;
+            color: #e0e0e0;
+            border-color: #3a3a3a;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ============ CTA BUTTON ============ */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+
+        body.dark-mode footer {
+            background: #0f0f0f;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: #bdc3c7;
+        }
+
+        /* ============ BACK TO TOP BUTTON ============ */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ============ WHATSAPP FLOATING BUTTON ============ */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            z-index: 998;
+            transition: 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            bottom: 100px;
+        }
+
+        /* ============ WEATHER WIDGET ============ */
+        .weather-widget {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            z-index: 998;
+            min-width: 200px;
+            display: none;
+        }
+
+        .weather-widget.show {
+            display: block;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .weather-widget h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .weather-widget p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* ============ SEARCH BAR ============ */
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            font-size: 1rem;
+            background: white;
+            transition: 0.3s;
+        }
+
+        body.dark-mode .search-box {
+            background: #2a2a2a;
+            color: #e0e0e0;
+            border-color: var(--primary-color);
+        }
+
+        .search-box:focus {
+            outline: none;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+            max-height: 300px;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            display: none;
+            z-index: 1000;
+        }
+
+        body.dark-mode .search-results {
+            background: #2a2a2a;
+        }
+
+        .search-results.show {
+            display: block;
+        }
+
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        body.dark-mode .search-result-item {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .search-result-item:hover {
+            background: var(--bg-light);
+            padding-left: 1.5rem;
+        }
+
+        body.dark-mode .search-result-item:hover {
+            background: #3a3a3a;
+        }
+
+        .search-result-item strong {
+            color: var(--primary-dark);
+        }
+
+        /* ============ COMMENTS SECTION ============ */
+        .comments-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        body.dark-mode .comments-section {
+            background: #2a2a2a;
+        }
+
+        .comments-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .comment {
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        body.dark-mode .comment {
+            background: #3a3a3a;
+        }
+
+        .comment-author {
+            color: var(--primary-dark);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-text {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ============ RESPONSIVE DESIGN ============ */
+        /* Extra Small Devices (320px - 480px) - Mobile Phones */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            header {
+                padding: 0.5rem 0;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+                gap: 5px;
+            }
+
+            nav ul {
+                display: none !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+                flex-direction: column;
+                gap: 0;
+                padding: 0.5rem 0;
+                z-index: 999;
+            }
+
+            nav ul.active {
+                display: flex !important;
+            }
+
+            nav ul li a {
+                padding: 0.75rem;
+                display: block;
+                font-size: 0.9rem;
+            }
+
+            .hamburger {
+                display: flex !important;
+            }
+
+            .hamburger span {
+                width: 20px;
+                height: 2.5px;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .dark-mode-toggle {
+                padding: 6px 10px;
+                font-size: 1rem;
+            }
+
+            .hero-section {
+                height: 400px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .slide-content p {
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .about-content,
+            .contact-content,
+            .education-content,
+            .agriculture-content {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+
+            .about-img,
+            .education-img {
+                font-size: 3rem;
+                height: 250px;
+            }
+
+            .stats-grid,
+            .panchayat-grid,
+            .religious-grid,
+            .events-grid,
+            .gallery-grid,
+            .news-grid,
+            .videos-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+
+            .slider-btn {
+                padding: 8px 12px;
+                font-size: 1.2rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .btn-small {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .whatsapp-button {
+                bottom: 70px !important;
+                right: 15px !important;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .back-to-top {
+                bottom: 15px !important;
+                right: 15px !important;
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            .weather-widget {
+                right: 15px !important;
+                top: 80px !important;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .map-container,
+            .map-container-temples {
+                height: 300px;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .form-group label {
+                font-size: 0.9rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+
+            .crops-list {
+                gap: 1rem;
+            }
+
+            .crop-item {
+                gap: 0.8rem;
+            }
+
+            .crop-icon {
+                font-size: 2rem;
+            }
+
+            .news-card,
+            .video-card {
+                padding: 1.5rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr !important;
+            }
+
+            .modal-content {
+                width: 90%;
+                padding: 1.5rem;
+            }
+
+            footer {
+                padding: 2rem 0 3rem;
+            }
+        }
+
+        /* Small to Medium Devices (481px - 768px) - Large Phones & Small Tablets */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem !important;
+            }
+
+            nav a {
+                font-size: 0.95rem;
+            }
+
+            .hero-section {
+                height: 500px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .slide-content p {
+                font-size: 0.95rem;
+            }
+
+            section {
+                padding: 2.5rem 0;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid,
+            .panchayat-grid,
+            .events-grid,
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content,
+            .education-content,
+            .agriculture-content {
+                grid-template-columns: 1fr !important;
+            }
+
+            .news-grid,
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .religious-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .about-img,
+            .education-img {
+                height: 300px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .map-container,
+            .map-container-temples {
+                height: 350px;
+            }
+
+            .whatsapp-button {
+                bottom: 90px !important;
+                right: 20px !important;
+            }
+
+            .back-to-top {
+                bottom: 30px !important;
+                right: 20px !important;
+            }
+
+            .weather-widget {
+                right: 20px !important;
+                top: 90px !important;
+            }
+        }
+
+        /* Medium Devices (769px - 1023px) - Tablets */
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero-section {
+                height: 550px;
+            }
+
+            .slide-content h1 {
+                font-size: 2.2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid,
+            .panchayat-grid,
+            .events-grid,
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem;
+            }
+
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .religious-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .about-content,
+            .education-content,
+            .contact-content {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .agriculture-content {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .about-img,
+            .education-img {
+                height: 320px;
+            }
+
+            .map-container,
+            .map-container-temples {
+                height: 400px;
+            }
+        }
+
+        /* Large Devices (1024px - 1199px) - Laptops */
+        @media (min-width: 1024px) and (max-width: 1199px) {
+            .container {
+                max-width: 960px;
+            }
+
+            .stats-grid,
+            .panchayat-grid,
+            .events-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .videos-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .religious-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .about-content,
+            .education-content,
+            .agriculture-content,
+            .contact-content {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .map-container,
+            .map-container-temples {
+                height: 450px;
+            }
+        }
+
+        /* Extra Large Devices (1200px+) - Desktops */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
+            }
+
+            .stats-grid,
+            .panchayat-grid,
+            .events-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+
+            .news-grid,
+            .videos-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .religious-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+
+            .about-content,
+            .education-content,
+            .agriculture-content {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .contact-content {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .map-container,
+            .map-container-temples {
+                height: 500px;
+            }
+
+            nav ul {
+                gap: 2rem !important;
+            }
+        }
+
+        /* Landscape Orientation Adjustments */
+        @media (orientation: landscape) and (max-height: 600px) {
+            .hero-section {
+                height: 300px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 1.5rem 0;
+            }
+
+            section h2 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* High-Resolution Displays (Retina) */
+        @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============ HEADER ============ -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>🌾</span>
+                <span>Dharmpur</span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#agriculture">Agriculture</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- ============ HERO SLIDER ============ -->
+    <section class="hero-section" id="home">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1>🎉 Holi Celebration</h1>
+                    <p>Festival of Colors & Joy</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1>✨ Diwali Celebration</h1>
+                    <p>Festival of Lights</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1>📖 Bhagwat Katha</h1>
+                    <p>Spiritual Discourse</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-overlay"></div>
+                <div class="slide-content" style="background-image: url('image.png'); background-size: cover; background-position: center; width: 100%; height: 100%;">
+                    <p style="background: rgba(0, 0, 0, 0.5); padding: 1rem; border-radius: 8px;">
+                        Map View <br>
+                     Our Village map view for found Route and Location
+                    </p>
+                </div>
+            </div>
+            
+
+            <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+
+            <div class="slider-controls">
+                <div class="dot active" onclick="currentSlide(0)"></div>
+                <div class="dot" onclick="currentSlide(1)"></div>
+                <div class="dot" onclick="currentSlide(2)"></div>
+                <div class="dot" onclick="currentSlide(3)"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Dharmpur</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Our Village</h3>
+                    <p>
+                        Dharmpur is a vibrant village located in Etah District, Uttar Pradesh, with PIN code 207302.
+                        Positioned near Jalesar with excellent road connectivity, our village is a blend of
+                        traditional values and modern development.
+                    </p>
+                    <p>
+                        Our village is blessed with a strong agricultural base, rich cultural heritage, and a
+                        compassionate community of over 795 voters. We take pride in our traditional crafts, local
+                        businesses, and the warm hospitality of our people.
+                    </p>
+                    <p>
+                        With sustainable water resources including handpumps and a commitment to education and health,
+                        Dharmpur is continuously evolving while preserving its cultural roots.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🚗</div>
+                            <div>
+                                <strong>Transport</strong><br>
+                                <small>Road connectivity to Jalesar</small>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">💧</div>
+                            <div>
+                                <strong>Water</strong><br>
+                                <small>Handpump & modern systems</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="ChatGPT Image May 17, 2026, 08_26_16 AM.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ POPULATION STATS ============ -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <h2>Population Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">795</div>
+                    <div class="stat-label">Total Voters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">445</div>
+                    <div class="stat-label">Male Population</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">347</div>
+                    <div class="stat-label">Female Population</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Third Gender</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PANCHAYAT SECTION ============ -->
+    <section class="panchayat" id="panchayat">
+        <div class="container">
+            <h2>Village Administration</h2>
+            <div class="panchayat-grid">
+                <div class="panchayat-card">
+                    <div class="panchayat-icon">🏛️</div>
+                    <h3>Panchayat</h3>
+                    <p><strong>Shakrauli</strong></p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-light);">
+                        Our Gram Panchayat is dedicated to community development and welfare
+                    </p>
+                </div>
+                <div class="panchayat-card">
+                    <div class="panchayat-icon">👨‍💼</div>
+                    <h3>Gram Pradhan</h3>
+                    <p><strong>Rinku Prajapati</strong></p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-light);">
+                        Leading our village with vision and commitment
+                    </p>
+                </div>
+                <div class="panchayat-card">
+                    <div class="panchayat-icon">📋</div>
+                    <h3>Secretary</h3>
+                    <p><strong>Sunil Kumar</strong></p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-light);">
+                        Coordinating administrative activities and welfare schemes
+                    </p>
+                </div>
+
+
+
+                <div class="panchayat-card">
+                    <div class="panchayat-icon">📋</div>
+                    <h3>Vidhayak</h3>
+                    <p><strong>Sanjiv kumar Diwakar</strong></p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-light);">
+                        Coordinating administrative activities and welfare schemes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EDUCATION SECTION ============ -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-content">
+                <div class="education-info">
+                    <h3>Our Educational Institutions</h3>
+                    <ul class="education-list">
+                        <li class="education-item">
+                            <div class="education-item-icon">🏫</div>
+                            <div class="education-item-text">
+                                <h4>Government Primary School</h4>
+                                <p>Providing quality primary education to approximately 100-150 students</p>
+                            </div>
+                        </li>
+                        <li class="education-item">
+                            <div class="education-item-icon">👨‍🎓</div>
+                            <div class="education-item-text">
+                                <h4>Student Enrollment</h4>
+                                <p>Approximately 100-150 students enrolled with modern teaching methods</p>
+                            </div>
+                        </li>
+                        <li class="education-item">
+                            <div class="education-item-icon">📚</div>
+                            <div class="education-item-text">
+                                <h4>Curriculum</h4>
+                                <p>Comprehensive curriculum following national guidelines with focus on holistic
+                                    development</p>
+                            </div>
+                        </li>
+                        <li class="education-item">
+                            <div class="education-item-icon">🎯</div>
+                            <div class="education-item-text">
+                                <h4>Our Mission</h4>
+                                <p>Empowering students through education for a brighter future</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="education-img"><img style="height: 400px; border-radius: 10px;" src="./chat-uncensored-ai-flux (3).png" alt="Education"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NEWS/BLOG SECTION ============ -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2>Village News & Updates</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-date">May 5, 2026</div>
+                    <div class="news-category">📢 Announcement</div>
+                    <h3>Holi Celebration Success</h3>
+                    <p>This year's Holi celebration was a grand success with the entire community participating in the
+                        festival of colors. Over 500 villagers gathered for the event.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">May 1, 2026</div>
+                    <div class="news-category">🌾 Agriculture</div>
+                    <h3>Wheat Harvest Season Begins</h3>
+                    <p>Farmers have started harvesting wheat crop. Expected yield is 20% higher than last year due to
+                        good monsoon and weather conditions.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">April 28, 2026</div>
+                    <div class="news-category">📚 Education</div>
+                    <h3>School Performance Excellent</h3>
+                    <p>Government Primary School students scored excellent marks in annual exams. 85% students passed
+                        with distinction or first division.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">April 25, 2026</div>
+                    <div class="news-category">🏗️ Development</div>
+                    <h3>Road Infrastructure Upgrade</h3>
+                    <p>New road connectivity project to Jalesar has been approved. Construction expected to begin next
+                        month, improving access to nearby city.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">April 20, 2026</div>
+                    <div class="news-category">💧 Community</div>
+                    <h3>New Handpump Installed</h3>
+                    <p>Installation of 5 new handpumps completed in southern part of village. This will improve water
+                        accessibility for farmers during irrigation season.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">April 15, 2026</div>
+                    <div class="news-category">🙏 Religious</div>
+                    <h3>Navratri Celebrations Planned</h3>
+                    <p>Grand Navratri celebrations planned for September. Various cultural programs and religious
+                        ceremonies will be organized across all temples.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEOS SECTION ============ -->
+    <section class="videos" id="videos">
+        <div class="container">
+            <h2>Festival Videos & Media</h2>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-placeholder">🎥</div>
+                    <h3>Holi Celebration 2026</h3>
+                    <p>Watch our Holi festival celebration featuring colors, music, and community joy.</p>
+                    <button class="btn-small" onclick="playVideo('holi')">Watch Video</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">🎆</div>
+                    <h3>Diwali 2025 Highlights</h3>
+                    <p>Beautiful moments from last year's Diwali festival with lights and celebrations.</p>
+                    <button class="btn-small" onclick="playVideo('diwali')">Watch Video</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">📖</div>
+                    <h3>Bhagwat Katha Session</h3>
+                    <p>Spiritual discourse and religious teachings from our village temple.</p>
+                    <button class="btn-small" onclick="playVideo('katha')">Watch Video</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">🌾</div>
+                    <h3>Agricultural Methods</h3>
+                    <p>Learn about our traditional and modern farming practices.</p>
+                    <button class="btn-small" onclick="playVideo('farming')">Watch Video</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">🏫</div>
+                    <h3>School Activities</h3>
+                    <p>Students engaged in various learning and cultural activities.</p>
+                    <button class="btn-small" onclick="playVideo('school')">Watch Video</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">👥</div>
+                    <h3>Community Events</h3>
+                    <p>Community gatherings, sports events, and social programs.</p>
+                    <button class="btn-small" onclick="playVideo('community')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RELIGIOUS PLACES ============ -->
+    <section class="religious" id="religious">
+        <div class="container">
+            <h2>Religious Places</h2>
+            <div class="religious-card">
+                <div class="religious-image-wrap">
+                    <img class="religious-image"
+                        src="https://placehold.co/1200x900/1f3b2f/f7f3eb?text=Replace+This+Image"
+                        alt="Religious place image placeholder">
+                    <div class="religious-overlay"></div>
+                    <div class="religious-badge">Sacred Heritage</div>
+                </div>
+                <div class="religious-content">
+                    <p class="religious-kicker">Dharmpur Spiritual Landmark</p>
+                    <h3>Premium Religious Palace Card</h3>
+                    <p>
+                        A modern showcase for the village's religious identity, designed with a clean layout,
+                        elegant spacing, and a default image you can replace later with your own photo.
+                    </p>
+                    <div class="religious-meta">
+                        <span>Temple View</span>
+                        <span>Peaceful Space</span>
+                        <span>Festival Spot</span>
+                    </div>
+                    <div class="religious-mini-grid">
+                        <div class="religious-mini-card">
+                            <strong>Hanuman Mandir</strong>
+                            <small>Devotion and daily prayers</small>
+                        </div>
+                        <div class="religious-mini-card">
+                            <strong>Shiv Mandir</strong>
+                            <small>Meditation and sacred rituals</small>
+                        </div>
+                        <div class="religious-mini-card">
+                            <strong>Mata Mandir</strong>
+                            <small>Festival worship and blessings</small>
+                        </div>
+                        <div class="religious-mini-card">
+                            <strong>Pathwari Mandir</strong>
+                            <small>Historic village heritage</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container-temples">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541.875747760008!2d78.30367817524272!3d27.41080557635389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39745f03312be3f3%3A0x347858f763aeef49!2z4KS24KWN4KSw4KWAIOCkueCkqOClgeCkruCkvuCkqCDgpK7gpILgpKbgpL_gpLAsIOCkp-CksOCkruCkquClgeCksA!5e0!3m2!1sen!2sin!4v1778006734647!5m2!1sen!2sin"
+                    style="width:100%; height:100%; border:none;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EVENTS SECTION ============ -->
+    <section class="events" id="events">
+        <div class="container">
+            <h2>Village Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-icon">🎉</div>
+                    <h3>Holi Celebration</h3>
+                    <p>The Festival of Colors is celebrated with great enthusiasm and joy. Villagers gather to play with
+                        colors and spread happiness.</p>
+                    <div class="event-date">March - April</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">✨</div>
+                    <h3>Diwali Celebration</h3>
+                    <p>The Festival of Lights illuminates our village with joy. Homes are decorated, lights are lit, and
+                        sweets are shared among all.</p>
+                    <div class="event-date">October - November</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">📖</div>
+                    <h3>Bhagwat Katha</h3>
+                    <p>Spiritual discourses on the Bhagavad Gita are organized, bringing the community together for
+                        religious and moral enlightenment.</p>
+                    <div class="event-date">Throughout the Year</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🎭</div>
+                    <h3>Cultural Programs</h3>
+                    <p>Traditional music, dance, and drama performances showcase the rich cultural heritage of our
+                        village.</p>
+                    <div class="event-date">Various Occasions</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🏅</div>
+                    <h3>Sports Events</h3>
+                    <p>Annual sports competitions unite the youth and promote physical fitness and team spirit in the
+                        community.</p>
+                    <div class="event-date">Summer Season</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🤝</div>
+                    <h3>Community Gatherings</h3>
+                    <p>Regular social and welfare events strengthen community bonds and promote collective growth and
+                        development.</p>
+                    <div class="event-date">Year-round</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALLERY SECTION ============ -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Village Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('🌅 Sunrise in Dharmpur')">🌅 Sunrise View</div>
+                <div class="gallery-item" onclick="openModal('🌻 Golden Fields')">🌻 Fields</div>
+                <div class="gallery-item" onclick="openModal('🏛️ Ancient Temples')">🏛️ Religious Sites</div>
+                <div class="gallery-item" onclick="openModal('🎪 Festival Moments')">🎪 Festivals</div>
+                <div class="gallery-item" onclick="openModal('🌳 Natural Beauty')">🌳 Forest</div>
+                <div class="gallery-item" onclick="openModal('🏮 Evening Vibes')">🏮 Evening</div>
+                <div class="gallery-item" onclick="openModal('🏡 Village Homes')">🏡 Homes</div>
+                <div class="gallery-item" onclick="openModal('👥 Community')">👥 People</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MODAL ============ -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle"></h3>
+            <p style="margin-top: 1rem; font-size: 4rem; text-align: center;" id="modalImage"></p>
+        </div>
+    </div>
+
+    <!-- ============ AGRICULTURE SECTION ============ -->
+    <section class="agriculture" id="agriculture">
+        <div class="container">
+            <h2>Agriculture & Farming</h2>
+            <div class="agriculture-content">
+                <div class="agriculture-text">
+                    <h3>Main Crops of Dharmpur</h3>
+                    <p>Dharmpur is primarily an agricultural village with fertile lands supporting sustainable farming
+                        practices. Our farmers cultivate the following major crops:</p>
+                    <ul class="crops-list">
+                        <li class="crop-item">
+                            <div class="crop-icon">🌾</div>
+                            <div>
+                                <h4>Wheat (गेहूँ)</h4>
+                                <p>Primary winter crop, harvested in March-April</p>
+                            </div>
+                        </li>
+                        <li class="crop-item">
+                            <div class="crop-icon">🌱</div>
+                            <div>
+                                <h4>Bajra (बाजरा)</h4>
+                                <p>Millet crop, drought resistant, harvested in September-October</p>
+                            </div>
+                        </li>
+                        <li class="crop-item">
+                            <div class="crop-icon">🍚</div>
+                            <div>
+                                <h4>Rice (धान)</h4>
+                                <p>Monsoon crop, harvested in October-November</p>
+                            </div>
+                        </li>
+                        <li class="crop-item">
+                            <div class="crop-icon">🥔</div>
+                            <div>
+                                <h4>Potato (आलू)</h4>
+                                <p>Winter vegetable crop, high yield and income source</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="agriculture-info">
+                    <div class="info-card">
+                        <div class="info-icon">💧</div>
+                        <h4>Water Source</h4>
+                        <p><strong>Handpumps</strong> - Reliable water supply for irrigation</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🚜</div>
+                        <h4>Farming Methods</h4>
+                        <p><strong>Traditional & Modern</strong> - Blending heritage with technology</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📈</div>
+                        <h4>Productivity</h4>
+                        <p><strong>High Yield</strong> - Fertile soil and good climate support</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">👨‍🌾</div>
+                        <h4>Farmers</h4>
+                        <p><strong>Community Driven</strong> - Strong farming community cooperation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <strong>Address</strong>
+                            <p>Dharmpur Village, Etah District<br>Uttar Pradesh - 207302</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <strong>WhatsApp</strong>
+                            <p><a href="https://wa.me/919876543210"
+                                    style="color: var(--primary-color); text-decoration: none;">Message us on
+                                    WhatsApp</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            <p>info@dharmpur.com<br>support@dharmpur.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-text">
+                            <strong>Office Hours</strong>
+                            <p>Mon-Fri: 9:00 AM - 5:00 PM<br>Sat: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <h3>Send Message</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541.875747760008!2d78.30367817524272!3d27.41080557635389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39745f0016fc9683%3A0xf21c31549cad8463!2sVillage%20Dharmpur!5e0!3m2!1sen!2sin!4v1778006621168!5m2!1sen!2sin"
+                    style="width:100%; height:100%; border:none;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Village</h4>
+                    <p style="font-size: 0.9rem; color: #bdc3c7;">Dharmpur is a vibrant village in Etah District, UP
+                        with rich cultural heritage and agricultural prosperity.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dharmpur Village. All rights reserved.</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Built with ❤️ for our community | Etah District, Uttar
+                    Pradesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP BUTTON ============ -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆️</button>
+
+    <!-- ============ WHATSAPP FLOATING BUTTON ============ -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-button" title="Chat on WhatsApp">💬</a>
+
+    <!-- ============ WEATHER WIDGET ============ -->
+    <div class="weather-widget" id="weatherWidget">
+        <h4>🌤️ Etah, UP</h4>
+        <p><strong>Temperature:</strong> 32°C</p>
+        <p><strong>Condition:</strong> Sunny</p>
+        <p><strong>Humidity:</strong> 45%</p>
+        <p><strong>Wind:</strong> 12 km/h</p>
+    </div>
+
+    <!-- ============ JAVASCRIPT ============ -->
+    <script>
+        // ========== SLIDER FUNCTIONALITY ==========
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            if (n >= slides.length) currentSlideIndex = 0;
+            if (n < 0) currentSlideIndex = slides.length - 1;
+
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-slide every 8 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 8000);
+
+        // ========== NAVIGATION ==========
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // ========== DARK MODE ==========
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeToggle.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // ========== MODAL GALLERY ==========
+        const modal = document.getElementById('imageModal');
+
+        function openModal(title) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalImage').textContent = title.split(' ')[0];
+            modal.classList.add('show');
+        }
+
+        function closeModal() {
+            modal.classList.remove('show');
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // ========== FORM SUBMISSION ==========
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+
+            alert(`Thank you ${name}! Your message has been received. We will respond to ${email} soon.`);
+            event.target.reset();
+
+            // Scroll to top after submission
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ========== BACK TO TOP BUTTON ==========
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ========== SMOOTH SCROLLING ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ========== STATS COUNTER ANIMATION ==========
+        function animateCounter(element) {
+            const target = parseInt(element.textContent);
+            let current = 0;
+            const increment = target / 50;
+
+            const counter = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(counter);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Trigger counter animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.target.classList.contains('stat-number')) {
+                    if (!entry.target.dataset.animated) {
+                        animateCounter(entry.target);
+                        entry.target.dataset.animated = 'true';
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-number').forEach(el => observer.observe(el));
+
+        // ========== VIDEO PLAYER ==========
+        function playVideo(videoType) {
+            const videoUrls = {
+                'holi': 'https://www.youtube.com/embed/G5KLPa1cJxE',
+                'diwali': 'https://www.youtube.com/embed/rP76yXwP-ck',
+                'katha': 'https://www.youtube.com/embed/xQZbWtADNpE',
+                'farming': 'https://www.youtube.com/embed/lNYt5qfM0WM',
+                'school': 'https://www.youtube.com/embed/5CsKvdHGjN0',
+                'community': 'https://www.youtube.com/embed/OyAFZX8v5bE'
+            };
+
+            const videoUrl = videoUrls[videoType];
+            if (videoUrl) {
+                modal.innerHTML = `
+                    <div style="position: relative; width: 90%; max-width: 800px; background: black; border-radius: 15px; overflow: hidden;">
+                        <button class="close-modal" onclick="closeModal()" style="position: absolute; top: 10px; right: 10px; z-index: 10;">&times;</button>
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="${videoUrl}?autoplay=1" allowfullscreen="" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                `;
+                modal.classList.add('show');
+            }
+        }
+
+        // ========== AUTO SHOW WEATHER WIDGET ==========
+        setTimeout(() => {
+            const weatherWidget = document.getElementById('weatherWidget');
+            if (weatherWidget) {
+                weatherWidget.classList.add('show');
+                setTimeout(() => {
+                    weatherWidget.classList.remove('show');
+                }, 5000);
+            }
+        }, 3000);
+    </script>
+</body>
+
+</html>
